@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 40px; }
+    input, button { padding: 10px; font-size: 16px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <input id="a" type="number" placeholder="First number">
+  <input id="b" type="number" placeholder="Second number"><br>
+  <button onclick="add()">Add</button>
+  <button onclick="sub()">Subtract</button>
+  <button onclick="mul()">Multiply</button>
+  <p id="result">Result: </p>
+
+  <script>
+    function show(v) { document.getElementById('result').innerText = 'Result: ' + v; }
+    function add() { show(+a.value + +b.value); }
+    function sub() { show(+a.value - +b.value); }
+    function mul() { show(+a.value * +b.value); }
+  </script>
+</body>
+</html>
